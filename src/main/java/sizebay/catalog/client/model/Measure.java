@@ -24,6 +24,8 @@ public enum Measure {
 	weightChart,
 	equivalence,
 	headCircumference,
-	weight;
+	weight,
+	palm,
+	wrist;
 
 }
