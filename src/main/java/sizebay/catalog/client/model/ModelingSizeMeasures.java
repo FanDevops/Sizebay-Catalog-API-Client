@@ -37,6 +37,8 @@ public class ModelingSizeMeasures   {
   ModelingMeasureRange equivalence = null;
   ModelingMeasureRange headCircumference = null;
 	ModelingMeasureRange weight = null;
+	ModelingMeasureRange palm = null;
+	ModelingMeasureRange wrist = null;
 
 }
 

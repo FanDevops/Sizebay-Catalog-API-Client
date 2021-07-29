@@ -22,5 +22,11 @@ public class ProfileMeasurements implements Serializable {
     double fist;
     double underBust;
 		Double poundWeight;
+		double thigh;
+		double biceps;
+		double headCircumference;
+		double palm;
+		double wrist;
+
 
 }
