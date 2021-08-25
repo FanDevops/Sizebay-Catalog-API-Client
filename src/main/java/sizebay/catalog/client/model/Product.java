@@ -51,6 +51,7 @@ public class Product   {
 	private List<String> barcodes;
 	private Measure composedMeasure;
 	private SizeSystem modelingSizeSystem;
+	private boolean sizeTailor;
 
   private List<String> availableSizes = new ArrayList<>();
   private ImportationError importationError;
