@@ -20,5 +20,6 @@ public class ProductBasicInformationToVFR {
 	private boolean accessory;
 	private boolean shoe;
 	private boolean status;
+	private boolean sizeTailor;
 
 }

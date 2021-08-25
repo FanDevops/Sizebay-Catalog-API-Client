@@ -52,6 +52,7 @@ public class ProductIntegration implements Serializable {
 	private Measure composedMeasure;
 	private SizeSystem modelingSizeSystem;
 	private Map<String, ModelingSizeMeasures> measures;
+	private boolean sizeTailor;
 
 	public ProductBasicInformation castToProductBasicInformation() {
 		ProductBasicInformation basicInfo = new ProductBasicInformation();
