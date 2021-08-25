@@ -54,4 +54,6 @@ public class ProductBasicInformation implements Serializable {
 	Boolean useStrongModeling;
 	double weightStyle;
 	SizeSystem sizeSystem;
+	boolean sizeTailor;
+
 }
