@@ -21,5 +21,5 @@ public class TenantDetails {
 	private TenantOperation tenantOperation;
 	private TenantStatus status;
 	private CoverageDetails coverageDetails;
-
+	private String tenantImageUrl;
 }
