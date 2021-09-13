@@ -37,6 +37,9 @@ public class Profile implements Serializable {
      int isActive;
      long lastActiveTime;
 
+     @JsonProperty("is3dFeel")
+		 boolean is3dFeel;
+
      ProfileMeasurements measures;
      ProfileProduct product;
 
