@@ -27,6 +27,7 @@ public class ProfileMeasurements implements Serializable {
 		double headCircumference;
 		double palm;
 		double wrist;
+		double insoleLength;
 
 
 }

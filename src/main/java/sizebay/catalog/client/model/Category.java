@@ -19,6 +19,7 @@ public class Category   {
 	private Long strongSubcategoryId = null;
 	private String strongSubcategoryName = null;
 	private boolean isShoeCategory;
+	private boolean sizeTailor;
 
   @Getter
   private ClothesType clothesType = ClothesType.FULL_BODY;

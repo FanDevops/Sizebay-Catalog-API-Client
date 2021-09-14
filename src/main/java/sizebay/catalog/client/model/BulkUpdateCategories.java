@@ -12,4 +12,6 @@ public class BulkUpdateCategories {
 	private ClothesType clothesType;
 	private Long strongCategoryId;
 	private Long strongSubcategoryId;
+	private Boolean sizeTailor;
+
 }
