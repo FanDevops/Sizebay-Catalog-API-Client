@@ -790,6 +790,11 @@ public class CatalogAPI {
 	public void updateTenantDetails(TenantDetails tenantDetails) {
 		client.put(ENDPOINT_TENANTS + "/details/",tenantDetails);
 	}
+
+	public void updateTenantDetailsLogo(TenantDetails tenantDetails) {
+		client.put(ENDPOINT_TENANTS + "/details/logo/",tenantDetails);
+	}
+
 	/*
 	 * End tenant management
 	 */
