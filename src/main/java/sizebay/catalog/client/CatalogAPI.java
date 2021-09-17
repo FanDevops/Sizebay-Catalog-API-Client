@@ -791,8 +791,8 @@ public class CatalogAPI {
 		client.put(ENDPOINT_TENANTS + "/details/",tenantDetails);
 	}
 
-	public void updateTenantDetailsLogo(TenantDetails tenantDetails) {
-		client.put(ENDPOINT_TENANTS + "/details/logo/",tenantDetails);
+	public void updateTenantDetailsLogo(String tenantLogoUrl) {
+		client.put(ENDPOINT_TENANTS + "/details/logo/",tenantLogoUrl);
 	}
 
 	/*
