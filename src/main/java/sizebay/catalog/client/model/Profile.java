@@ -32,6 +32,7 @@ public class Profile implements Serializable {
      int bodyShapeWaist;
      int bodyShapeHip;
      int footShape;
+     int skinType;
      boolean ignoreGender;
 
      int isActive;
