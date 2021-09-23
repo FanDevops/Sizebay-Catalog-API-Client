@@ -43,5 +43,7 @@ public class Tenant implements Serializable {
 
 	String importationRules;
 
+	String tenantLogoUrl;
+
 	int active;
 }
