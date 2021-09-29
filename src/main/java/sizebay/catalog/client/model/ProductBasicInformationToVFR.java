@@ -16,6 +16,8 @@ public class ProductBasicInformationToVFR {
 	private Product.AgeGroupEnum ageGroup;
 	private StrongCategoryType strongCategoryType;
 	private ClothesType clothesType;
+	private Measure composedMeasure;
+	private ComposedMeasureOrder composedMeasureOrder;
 	private boolean pending;
 	private boolean accessory;
 	private boolean shoe;
