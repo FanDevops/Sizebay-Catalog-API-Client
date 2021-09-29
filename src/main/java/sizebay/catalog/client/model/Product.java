@@ -50,6 +50,7 @@ public class Product   {
 	private Boolean useStrongModeling;
 	private List<String> barcodes;
 	private Measure composedMeasure;
+	private ComposedMeasureOrder composedMeasureOrder;
 	private SizeSystem modelingSizeSystem;
 	private boolean sizeTailor;
 
