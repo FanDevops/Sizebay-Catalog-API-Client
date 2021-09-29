@@ -50,6 +50,7 @@ public class ProductIntegration implements Serializable {
 	private Boolean useStrongModeling;
 	private SizeSystem sizeSystem;
 	private Measure composedMeasure;
+	private ComposedMeasureOrder composedMeasureOrder;
 	private SizeSystem modelingSizeSystem;
 	private Map<String, ModelingSizeMeasures> measures;
 	private boolean sizeTailor;
@@ -82,6 +83,7 @@ public class ProductIntegration implements Serializable {
 		basicInfo.setAccessory(this.getIsAccessory());
 		basicInfo.setIsShoe(this.getIsShoe());
 		basicInfo.setComposedMeasure(this.getComposedMeasure());
+		basicInfo.setComposedMeasureOrder(this.getComposedMeasureOrder());
 
 		return basicInfo;
 	}
