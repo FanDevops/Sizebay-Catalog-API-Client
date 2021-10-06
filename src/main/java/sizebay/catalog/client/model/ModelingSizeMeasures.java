@@ -9,6 +9,7 @@ import lombok.*;
 public class ModelingSizeMeasures   {
 
   String sizeName = null;
+	String composedMeasureValue = null;
   ModelingMeasureRange chest = null;
   ModelingMeasureRange hip = null;
   ModelingMeasureRange waist = null;
