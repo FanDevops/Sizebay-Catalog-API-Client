@@ -22,6 +22,7 @@ public class CatalogAPI {
 		ENDPOINT_PRODUCT = "/products",
 		ENDPOINT_CATEGORIES = "/categories",
 		ENDPOINT_TENANTS = "/tenants",
+		ENDPOINT_TENANTS_DETAILS = "/tenants/details",
 		ENDPOINT_USER = "/user",
 		ENDPOINT_SIZE_STYLE = "/style",
 		ENDPOINT_DEVOLUTION = "/devolution",
@@ -66,6 +67,10 @@ public class CatalogAPI {
 
 	public List<Dashboard> retrieveDashboard() {
 		return client.getList(ENDPOINT_DASHBOARD, Dashboard.class);
+	}
+
+	public List<TenantDetails> getTenantDetails(TenantDetailsFilter filter) {
+		return client.getList(ENDPOINT_TENANTS_DETAILS + "/search" + "?" + filter.createQuery(), TenantDetails.class);
 	}
 
 	public Dashboard retrieveDashboardByTenant(Long tenantId) {
