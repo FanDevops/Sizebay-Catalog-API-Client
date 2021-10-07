@@ -55,6 +55,7 @@ public class Product   {
 	private boolean sizeTailor;
 
   private List<String> availableSizes = new ArrayList<>();
+  private List<SizeWithComposedMeasure> availableSizesWithComposedMeasure;
   private ImportationError importationError;
 
   @RequiredArgsConstructor
