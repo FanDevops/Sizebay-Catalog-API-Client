@@ -9,6 +9,7 @@ import org.junit.*;
 import sizebay.catalog.client.http.ApiException;
 import sizebay.catalog.client.model.*;
 import sizebay.catalog.client.model.Modeling.Gender;
+import sizebay.catalog.client.model.filters.CategoryFilter;
 
 @Ignore
 public class ExampleTest {
@@ -110,8 +111,8 @@ public class ExampleTest {
 		final Category category = new Category();
 		category.setName("Category Test");
 		category.setId( api.insertCategory(category) );
-
-		final List<Category> categories = api.searchForCategories(category.getName());
+		CategoryFilter filter = new CategoryFilter("0", "Category Test", null, null, null, null, null, null);
+		final List<Category> categories = api.searchForCategories(filter);
 		assertEquals( category, categories.get(0) );
 	}
 
