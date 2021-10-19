@@ -20,6 +20,7 @@ public class TenantDetailsFilter extends Filter {
     private String responsable;
     private String tableType;
     private String plan;
+    private List<String> coveredCategories;
     private List<String> features;
 
 }
