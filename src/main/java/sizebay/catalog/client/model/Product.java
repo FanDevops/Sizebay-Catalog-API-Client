@@ -58,6 +58,8 @@ public class Product   {
   private List<SizeWithComposedMeasure> availableSizesWithComposedMeasure;
   private ImportationError importationError;
 
+  private List<String> skus;
+
   @RequiredArgsConstructor
   public enum AgeGroupEnum {
     ADULT("adult"),
