@@ -437,8 +437,8 @@ public class CatalogAPI {
 		return client.getList(ENDPOINT_CATEGORIES + "?" + filter.createQuery(), Category.class);
 	}
 
-	public List<Category> searchForCategories(String text){
-		return client.getList(ENDPOINT_CATEGORIES + SEARCH_BY_TEXT + text, Category.class);
+	public List<Category> searchForCategories(CategoryFilter filter){
+		return client.getList(ENDPOINT_CATEGORIES + "/search/all?" + filter.createQuery(), Category.class);
 	}
 
 	public Category getCategory(long id) {
