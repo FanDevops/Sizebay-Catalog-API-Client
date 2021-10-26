@@ -18,5 +18,8 @@ public class CategoryFilter extends Filter {
 	private String onlyWithAssociation;
 	private String onlyWithoutAssociation;
 	private String onlyShoe;
+	private String sizeTailor;
+	private String clothesType;
+	private String strongCategoryName;
 
 }
