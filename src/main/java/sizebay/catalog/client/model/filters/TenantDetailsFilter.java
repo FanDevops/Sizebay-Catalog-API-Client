@@ -18,7 +18,7 @@ public class TenantDetailsFilter extends Filter {
     private String page;
     private String status;
     private String responsable;
-    private String tableType;
+    private String modelingType;
     private String plan;
     private String coveredCategories;
     private String features;
