@@ -69,10 +69,6 @@ public class CatalogAPI {
 		return client.getList(ENDPOINT_DASHBOARD, Dashboard.class);
 	}
 
-	public List<TenantDetails> getTenantDetails(TenantDetailsFilter filter) {
-		return client.getList(ENDPOINT_TENANTS_DETAILS + "/search" + "?" + filter.createQuery(), TenantDetails.class);
-	}
-
 	public Dashboard retrieveDashboardByTenant(Long tenantId) {
 		return client.getSingle(ENDPOINT_DASHBOARD + "/single/" + tenantId, Dashboard.class);
 	}
@@ -756,6 +752,10 @@ public class CatalogAPI {
 		return client.getSingle( ENDPOINT_TENANTS+ "/single/" + appToken, Tenant.class );
 	}
 
+	public List<TenantDetails> retrieveAllTenantDetails(TenantDetailsFilter filter) {
+		return client.getList(ENDPOINT_TENANTS_DETAILS  + "?" + filter.createQuery(), TenantDetails.class);
+	}
+
 	public List<Tenant> retrieveAllTenants(){
 		return client.getList( ENDPOINT_TENANTS, Tenant.class );
 	}
@@ -786,10 +786,6 @@ public class CatalogAPI {
 
 	public TenantDetails retrieveTenantDetails(long id) {
 		return client.getSingle(ENDPOINT_TENANTS + "/details/single/" + id, TenantDetails.class);
-	}
-
-	public List<TenantDetails> retrieveAllTenantDetails() {
-		return client.getList(ENDPOINT_TENANTS + "/details", TenantDetails.class);
 	}
 
 	public void updateTenantDetails(TenantDetails tenantDetails) {
