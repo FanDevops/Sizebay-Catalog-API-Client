@@ -31,6 +31,7 @@ public class ProductIntegration implements Serializable {
 	private String categoryName;
 	private String modelingName;
 	private String sizeType;
+	private String modelingSizeType;
 	private int availability;
 	private Long strongBrandId;
 	private String strongBrandName;
