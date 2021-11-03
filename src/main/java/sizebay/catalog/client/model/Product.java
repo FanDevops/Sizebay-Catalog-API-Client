@@ -12,7 +12,7 @@ public class Product   {
   private Long id;
   private String name;
   private String description;
-	private String permalink;
+  	private String permalink;
 	private Modeling.Gender gender;
 	private Modeling.Gender feedGender;
 	private String images;
@@ -29,6 +29,7 @@ public class Product   {
 	private String modelingName;
 	private Boolean available;
 	private String sizeType;
+	private String modelingSizeType;
 	private Wearability wearability;
 	private AgeGroupEnum ageGroup;
 	private AgeGroupEnum feedAgeGroup;
