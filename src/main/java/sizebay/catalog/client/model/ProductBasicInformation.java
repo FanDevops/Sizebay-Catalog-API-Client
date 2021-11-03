@@ -35,6 +35,7 @@ public class ProductBasicInformation implements Serializable {
 	@Deprecated boolean bottomOnly;
 	ClothesType clothesType;
 	String sizeType;
+	String modelingSizeType;
 	Boolean status;
 	Product.AgeGroupEnum ageGroup = null;
 	Product.AgeGroupEnum feedAgeGroup = Product.AgeGroupEnum.ADULT;
