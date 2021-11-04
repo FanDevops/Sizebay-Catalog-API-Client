@@ -24,5 +24,7 @@ public class ModelingFilter extends Filter {
 	private String strongCategoryType;
 	private String onlyAccessories;
 	private String status;
+	private String categoryId;
+	private String categoryName;
 
 }

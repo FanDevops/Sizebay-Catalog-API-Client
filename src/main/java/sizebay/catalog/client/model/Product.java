@@ -12,7 +12,7 @@ public class Product   {
   private Long id;
   private String name;
   private String description;
-	private String permalink;
+  	private String permalink;
 	private Modeling.Gender gender;
 	private Modeling.Gender feedGender;
 	private String images;
@@ -29,6 +29,7 @@ public class Product   {
 	private String modelingName;
 	private Boolean available;
 	private String sizeType;
+	private String modelingSizeType;
 	private Wearability wearability;
 	private AgeGroupEnum ageGroup;
 	private AgeGroupEnum feedAgeGroup;
@@ -57,6 +58,8 @@ public class Product   {
   private List<String> availableSizes = new ArrayList<>();
   private List<SizeWithComposedMeasure> availableSizesWithComposedMeasure;
   private ImportationError importationError;
+
+  private List<String> skus;
 
   @RequiredArgsConstructor
   public enum AgeGroupEnum {

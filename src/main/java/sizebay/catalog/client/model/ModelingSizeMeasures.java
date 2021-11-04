@@ -37,9 +37,16 @@ public class ModelingSizeMeasures   {
   ModelingMeasureRange weightChart = null;
   ModelingMeasureRange equivalence = null;
   ModelingMeasureRange headCircumference = null;
-	ModelingMeasureRange weight = null;
-	ModelingMeasureRange palm = null;
-	ModelingMeasureRange wrist = null;
+  ModelingMeasureRange weight = null;
+  ModelingMeasureRange palm = null;
+  ModelingMeasureRange wrist = null;
+
+  ModelingMeasureRange lowerLength = null;
+  ModelingMeasureRange collar = null;
+  ModelingMeasureRange calf = null;
+  ModelingMeasureRange width = null;
+  ModelingMeasureRange circumference = null;
+  ModelingMeasureRange bar = null;
 
 }
 

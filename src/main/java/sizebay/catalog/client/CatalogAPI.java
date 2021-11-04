@@ -22,6 +22,7 @@ public class CatalogAPI {
 		ENDPOINT_PRODUCT = "/products",
 		ENDPOINT_CATEGORIES = "/categories",
 		ENDPOINT_TENANTS = "/tenants",
+		ENDPOINT_TENANTS_DETAILS = "/tenants/details",
 		ENDPOINT_USER = "/user",
 		ENDPOINT_SIZE_STYLE = "/style",
 		ENDPOINT_DEVOLUTION = "/devolution",
@@ -437,8 +438,8 @@ public class CatalogAPI {
 		return client.getList(ENDPOINT_CATEGORIES + "?" + filter.createQuery(), Category.class);
 	}
 
-	public List<Category> searchForCategories(String text){
-		return client.getList(ENDPOINT_CATEGORIES + SEARCH_BY_TEXT + text, Category.class);
+	public List<Category> searchForCategories(CategoryFilter filter){
+		return client.getList(ENDPOINT_CATEGORIES + "/search/all?" + filter.createQuery(), Category.class);
 	}
 
 	public Category getCategory(long id) {
@@ -751,6 +752,10 @@ public class CatalogAPI {
 		return client.getSingle( ENDPOINT_TENANTS+ "/single/" + appToken, Tenant.class );
 	}
 
+	public List<TenantDetails> retrieveAllTenantDetails(TenantDetailsFilter filter) {
+		return client.getList(ENDPOINT_TENANTS_DETAILS  + "?" + filter.createQuery(), TenantDetails.class);
+	}
+
 	public List<Tenant> retrieveAllTenants(){
 		return client.getList( ENDPOINT_TENANTS, Tenant.class );
 	}
@@ -781,10 +786,6 @@ public class CatalogAPI {
 
 	public TenantDetails retrieveTenantDetails(long id) {
 		return client.getSingle(ENDPOINT_TENANTS + "/details/single/" + id, TenantDetails.class);
-	}
-
-	public List<TenantDetails> retrieveAllTenantDetails() {
-		return client.getList(ENDPOINT_TENANTS + "/details", TenantDetails.class);
 	}
 
 	public void updateTenantDetails(TenantDetails tenantDetails) {
