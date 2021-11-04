@@ -26,6 +26,12 @@ public enum Measure {
 	headCircumference,
 	weight,
 	palm,
-	wrist;
+	wrist,
+	lowerLength,
+	collar,
+	calf,
+	width,
+	circumference,
+	bar;
 
 }
