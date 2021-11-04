@@ -35,6 +35,8 @@ public class Tenant implements Serializable {
 
 	boolean automaticallyImportSize;
 
+	boolean memorizeSizes;
+
 	SizeSystem defaultSizeSystem;
 
 	boolean monitored;
