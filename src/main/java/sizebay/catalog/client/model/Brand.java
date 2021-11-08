@@ -16,6 +16,8 @@ public class Brand   {
   
   private Long id = null;
   private String name = null;
+  private Long associatedBrandId = null;
+  private String associatedBrandName = null;
   private Long strongBrandId = null;
   private String strongBrandName = null;
   private Integer shoeBrand = null;
