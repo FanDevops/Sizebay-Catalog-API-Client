@@ -32,6 +32,7 @@ public enum Measure {
 	calf,
 	width,
 	circumference,
-	bar;
+	bar,
+	fullBodyLength;
 
 }
