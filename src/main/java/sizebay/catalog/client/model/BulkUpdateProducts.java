@@ -18,6 +18,7 @@ public class BulkUpdateProducts {
 	private Long feedBrandId;
 	private Integer categoryId;
 	private Integer modelingId;
+	private String sizeSystem;
 	private String sizeType;
 	private Long strongBrandId;
 	private Long strongCategoryId;
