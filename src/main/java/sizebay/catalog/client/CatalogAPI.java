@@ -752,6 +752,10 @@ public class CatalogAPI {
 		return client.getSingle( ENDPOINT_TENANTS+ "/single/" + appToken, Tenant.class );
 	}
 
+	public Tenant getTenantInfo() {
+		return client.getSingle( ENDPOINT_TENANTS+ "/info/", Tenant.class);
+	}
+
 	public List<TenantDetails> retrieveAllTenantDetails(TenantDetailsFilter filter) {
 		return client.getList(ENDPOINT_TENANTS_DETAILS  + "?" + filter.createQuery(), TenantDetails.class);
 	}
