@@ -17,6 +17,7 @@ public class BrandFilter extends Filter {
 	private String name;
 	private String strongBrandId;
 	private String strongBrandName;
+	private String associatedBrandName;
 	private String onlyShoe;
 	private String onlyWithAssociation;
 	private String onlyWithoutAssociation;
