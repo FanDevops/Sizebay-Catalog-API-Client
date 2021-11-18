@@ -19,7 +19,6 @@ public class Modeling   {
 
   private TypeEnum type;
   private Long brandId;
-  private Long categoryId;
   private Measure composedMeasure;
   private ComposedMeasureOrder composedMeasureOrder;
 	private SizeSystem sizeSystem;
@@ -32,6 +31,8 @@ public class Modeling   {
 
 	boolean active = true;
 	boolean accessories = false;
+
+  private List<Long> categoriesIds = new ArrayList<Long>();
 
   private Boolean isShoeModeling;
 
