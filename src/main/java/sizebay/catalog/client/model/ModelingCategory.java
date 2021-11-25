@@ -7,7 +7,6 @@ import lombok.Setter;
 @Setter
 public class ModelingCategory {
 
-    long modelingId;
     long categoryId;
     String categoryName;
 
