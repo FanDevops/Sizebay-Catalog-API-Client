@@ -15,23 +15,24 @@ public class Modeling   {
   private String gMerchantBrandName;
   private String gMerchantAgeGroup;
   private String gMerchantSizeType;
-	private String observation;
+  private String observation;
 
   private TypeEnum type;
   private Long brandId;
-  private Long categoryId;
   private Measure composedMeasure;
   private ComposedMeasureOrder composedMeasureOrder;
-	private SizeSystem sizeSystem;
+  private SizeSystem sizeSystem;
   private List<ModelingSizeMeasures> measures = new ArrayList<>();
-	private List<CustomRange> customRanges = new ArrayList<>();
+  private List<CustomRange> customRanges = new ArrayList<>();
 
-	private Long originalModelingId;
+  private Long originalModelingId;
 
   private StrongCategoryType strongCategoryType;
 
-	boolean active = true;
-	boolean accessories = false;
+  boolean active = true;
+  boolean accessories = false;
+
+  private List<ModelingCategory> modelingCategories = new ArrayList<ModelingCategory>();
 
   private Boolean isShoeModeling;
 

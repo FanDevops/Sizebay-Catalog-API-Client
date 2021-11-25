@@ -754,6 +754,10 @@ public class CatalogAPI {
 		return client.getSingle( ENDPOINT_TENANTS+ "/single/" + appToken, Tenant.class );
 	}
 
+	public Tenant getTenantInfo() {
+		return client.getSingle( ENDPOINT_TENANTS+ "/info/", Tenant.class);
+	}
+
 	public List<TenantDetails> retrieveAllTenantDetails(TenantDetailsFilter filter) {
 		return client.getList(ENDPOINT_TENANTS_DETAILS  + "?" + filter.createQuery(), TenantDetails.class);
 	}
@@ -843,12 +847,24 @@ public class CatalogAPI {
 	 * Starting my sizebay user management
 	 */
 
+	public void createMySizebayUser(String username, MySizebayUser user) {
+		client.post("/users/admin/" + username, user);
+	}
+
 	public MySizebayUser getMySizebayUser(String username){
 		return client.getSingle( "/users/" + username, MySizebayUser.class);
 	}
 
 	public Long insertMySizebayUser(MySizebayUser user){
 		return client.post("/users/", user);
+	}
+
+	public void updateMySizebayUser(String userUsername, MySizebayUser user) {
+		client.put("/tenants/users/update/" + userUsername, user);
+	}
+
+	public void updateMySizebayUserPermissions(String userUsername, List<Long> tenantsId) {
+		client.post("/users/update/permissions/" + userUsername, tenantsId);
 	}
 
 	/*
