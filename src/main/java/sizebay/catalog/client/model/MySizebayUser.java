@@ -5,14 +5,17 @@ import java.util.List;
 import java.util.Map;
 import lombok.*;
 import lombok.experimental.Accessors;
+import sizebay.catalog.client.UserPrivilege;
 
 @Getter
 @Setter
 @NoArgsConstructor
 public class MySizebayUser {
 
+	private String nickname;
 	private String username;
 	private String password;
+	private UserPrivilege privilege;
 	private List<Tenant> tenants = new ArrayList<>();
 
 }
