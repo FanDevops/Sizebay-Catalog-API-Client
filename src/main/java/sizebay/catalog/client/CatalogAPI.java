@@ -402,6 +402,8 @@ public class CatalogAPI {
 		client.put(ENDPOINT_BRAND + "/single/" + id, brand);
 	}
 
+	public void updateBulkBrandAssociation(BulkUpdateBrandAssociation bulkUpdateBrandAssociation) { client.patch(ENDPOINT_BRAND, bulkUpdateBrandAssociation); }
+
 	public void deleteBrands() {
 		client.delete(ENDPOINT_BRAND);
 	}
