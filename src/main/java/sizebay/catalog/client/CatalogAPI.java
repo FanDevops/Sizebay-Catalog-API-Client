@@ -859,12 +859,12 @@ public class CatalogAPI {
 		return client.post("/users/", user);
 	}
 
-	public void updateMySizebayUser(String userUsername, MySizebayUser user) {
-		client.put("/tenants/users/single/" + userUsername, user);
+	public void updateMySizebayUser(String username, MySizebayUser user) {
+		client.put("/tenants/users/single/" + username, user);
 	}
 
-	public void updateMySizebayUserPermissions(String userUsername, List<Long> tenantsId) {
-		client.post("tenants/users/permissions/" + userUsername, tenantsId);
+	public void updateMySizebayUserPermissions(String username, List<Long> tenantsId) {
+		client.post("tenants/users/permissions/" + username, tenantsId);
 	}
 
 	/*
