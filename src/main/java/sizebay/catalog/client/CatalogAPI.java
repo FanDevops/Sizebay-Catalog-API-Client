@@ -860,11 +860,11 @@ public class CatalogAPI {
 	}
 
 	public void updateMySizebayUser(String userUsername, MySizebayUser user) {
-		client.put("/tenants/users/update/" + userUsername, user);
+		client.put("/tenants/users/single/" + userUsername, user);
 	}
 
 	public void updateMySizebayUserPermissions(String userUsername, List<Long> tenantsId) {
-		client.post("/users/update/permissions/" + userUsername, tenantsId);
+		client.post("tenants/users/permissions/" + userUsername, tenantsId);
 	}
 
 	/*
