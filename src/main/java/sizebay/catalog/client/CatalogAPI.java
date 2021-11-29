@@ -786,6 +786,10 @@ public class CatalogAPI {
 		client.put(ENDPOINT_TENANTS + "/hash", hash);
 	}
 
+	public void updateFeedXMLHasUpdated(Boolean hasUpdated) {
+		client.post(ENDPOINT_TENANTS + "/xmlHasUpdated", hasUpdated);
+	}
+
 	public void deleteTenant(long id) {
 		client.delete(ENDPOINT_TENANTS + "/" + id);
 	}
