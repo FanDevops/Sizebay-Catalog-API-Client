@@ -847,10 +847,6 @@ public class CatalogAPI {
 	 * Starting my sizebay user management
 	 */
 
-	public void createMySizebayUser(String username, MySizebayUser user) {
-		client.post("/users/admin/" + username, user);
-	}
-
 	public MySizebayUser getMySizebayUser(String username){
 		return client.getSingle( "/users/" + username, MySizebayUser.class);
 	}
@@ -863,8 +859,8 @@ public class CatalogAPI {
 		client.put("/tenants/users/single/" + username, user);
 	}
 
-	public void updateMySizebayUserPermissions(String username, List<Long> tenantsId) {
-		client.post("tenants/users/permissions/" + username, tenantsId);
+	public void updateMySizebayUserPermissions(String username, List<Integer> tenantsId) {
+		client.patch("tenants/users/permissions/" + username, tenantsId);
 	}
 
 	/*
