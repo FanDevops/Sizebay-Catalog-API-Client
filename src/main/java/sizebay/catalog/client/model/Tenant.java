@@ -1,6 +1,8 @@
 package sizebay.catalog.client.model;
 
 import java.io.Serializable;
+import java.util.List;
+
 import lombok.*;
 import lombok.experimental.Accessors;
 
@@ -48,4 +50,7 @@ public class Tenant implements Serializable {
 	String tenantLogoUrl;
 
 	int active;
+
+	private List<TenantFeature> features;
+
 }
