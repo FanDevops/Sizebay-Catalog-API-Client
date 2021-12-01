@@ -26,5 +26,6 @@ public class ModelingFilter extends Filter {
 	private String status;
 	private String categoryId;
 	private String categoryName;
+	private String groupIds;
 
 }
