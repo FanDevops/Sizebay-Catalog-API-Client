@@ -49,6 +49,10 @@ public class Tenant implements Serializable {
 
 	String tenantLogoUrl;
 
+	TenantPlan plan;
+
+	TenantStatus status;
+
 	int active;
 
 	private List<TenantFeature> features;
