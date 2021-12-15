@@ -30,5 +30,6 @@ public class TenantDetailsFilter extends Filter {
     private String reviewStatus;
     private String coveredCategories;
     private String features;
+    private Boolean showInImplantation;
 
 }
