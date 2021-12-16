@@ -67,9 +67,8 @@ public class Profile implements Serializable {
 
     		if(isGrayZone && productAgeGroup != null) {
 					try {
-						return Product.AgeGroupEnum.valueOf(productAgeGroup).name();
 					} catch (IllegalArgumentException e) {
-						return null;
+                        return Product.AgeGroupEnum.valueOf(productAgeGroup.toUpperCase()).name();
 					}
 				}
 
