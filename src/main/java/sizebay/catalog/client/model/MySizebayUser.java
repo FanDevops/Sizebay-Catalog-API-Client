@@ -15,6 +15,7 @@ public class MySizebayUser {
 	private String nickname;
 	private String username;
 	private String password;
+	private Boolean isToSendNews;
 	private UserPrivilege privilege;
 	private List<Tenant> tenants = new ArrayList<>();
 
