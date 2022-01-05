@@ -501,6 +501,10 @@ public class CatalogAPI {
 		return client.getList(ENDPOINT_MODELING + "/simplified/all", Modeling.class);
 	}
 
+	public Modeling getSingleSimplifiedModeling(long id) {
+		return client.getSingle(ENDPOINT_MODELING + "/simplified/single/" + id, Modeling.class);
+	}
+
 	public Modeling getModeling(long id) {
 		return client.getSingle(ENDPOINT_MODELING + "/single/" + id, Modeling.class);
 	}
