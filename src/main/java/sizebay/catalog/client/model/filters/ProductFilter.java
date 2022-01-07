@@ -46,5 +46,6 @@ public class ProductFilter extends Filter {
 	private String productsThatShouldBeFixed;
 	private String productsAvailable;
 	private String productsUnavailable;
+	private String productsError;
 	private String groupIds;
 }
