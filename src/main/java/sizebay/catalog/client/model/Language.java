@@ -7,7 +7,7 @@ package sizebay.catalog.client.model;
 
 public enum Language {
 
-	de, en, es, fi, fr,
+	de, en, es, esAR, fi, fr,
 	it, pt, ptBR, ru, sv,
 	jp, zh, ar
 
