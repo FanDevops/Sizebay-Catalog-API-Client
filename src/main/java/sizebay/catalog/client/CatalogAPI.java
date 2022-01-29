@@ -758,6 +758,18 @@ public class CatalogAPI {
 		return client.getSingle( ENDPOINT_TENANTS+ "/single/" + appToken, Tenant.class );
 	}
 
+	public TenantPlatformStore retrieveTenantPlatformStoreByStoreId(String storeId) {
+		return client.getSingle(ENDPOINT_TENANTS + "/platform/store/" + storeId, TenantPlatformStore.class);
+	}
+
+	public TenantPlatformStore retrieveTenantPlatformStoreByTenantId(String tenantId) {
+		return client.getSingle(ENDPOINT_TENANTS + "/platform/tenant/" + tenantId, TenantPlatformStore.class);
+	}
+
+	public Tenant retrieveTenantByStoreId(String storeId) {
+		return client.getSingle(ENDPOINT_TENANTS + "/tenant/store/" + storeId, Tenant.class);
+	}
+
 	public Tenant getTenantInfo() {
 		return client.getSingle( ENDPOINT_TENANTS+ "/info/", Tenant.class);
 	}
