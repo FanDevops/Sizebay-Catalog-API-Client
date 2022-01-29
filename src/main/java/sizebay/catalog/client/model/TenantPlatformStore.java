@@ -13,14 +13,11 @@ import java.io.Serializable;
 @Accessors(chain = true)
 public class TenantPlatformStore implements Serializable {
 
+    Long id;
     Long tenantId;
-
     Long storeId;
-
     String accessToken;
-
     String passToken;
-
     EcommercePlatform platform;
 
 }
