@@ -19,6 +19,8 @@ public class Product   {
 	private String tenantName;
 	private Long tenantId;
 	private String feedProductId;
+	private String feedSizes;
+	private String feedCategoryName;
 	private Long brandId;
 	private String brandName;
 	private Long feedBrandId;
