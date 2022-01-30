@@ -246,6 +246,14 @@ public class CatalogAPI {
 	 * Starting user (MySizebay) management
 	 */
 
+	public long insertTenantPlatformStore(TenantPlatformStore tenantPlatformStore) {
+		return client.post(ENDPOINT_TENANTS + "/platform/tenant", tenantPlatformStore);
+	}
+
+	public void updateTenantPlatformStore(String id, TenantPlatformStore tenantPlatformStore) {
+		client.put(ENDPOINT_TENANTS + "/platform/tenant/" + id, tenantPlatformStore);
+	}
+
 	public UserTenants authenticateAndRetrieveUser(String username, String password ) {
 		return client.getSingle( "/users/" + username + "/" + password + "/user", UserTenants.class );
 	}
