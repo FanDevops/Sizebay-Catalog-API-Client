@@ -246,6 +246,14 @@ public class CatalogAPI {
 	 * Starting user (MySizebay) management
 	 */
 
+	public long insertTenantPlatformStore(TenantPlatformStore tenantPlatformStore) {
+		return client.post(ENDPOINT_TENANTS + "/platform/tenant", tenantPlatformStore);
+	}
+
+	public void updateTenantPlatformStore(String id, TenantPlatformStore tenantPlatformStore) {
+		client.put(ENDPOINT_TENANTS + "/platform/tenant/" + id, tenantPlatformStore);
+	}
+
 	public UserTenants authenticateAndRetrieveUser(String username, String password ) {
 		return client.getSingle( "/users/" + username + "/" + password + "/user", UserTenants.class );
 	}
@@ -756,6 +764,18 @@ public class CatalogAPI {
 
 	public Tenant getTenant( String appToken ){
 		return client.getSingle( ENDPOINT_TENANTS+ "/single/" + appToken, Tenant.class );
+	}
+
+	public TenantPlatformStore retrieveTenantPlatformStoreByStoreId(String storeId) {
+		return client.getSingle(ENDPOINT_TENANTS + "/platform/store/" + storeId, TenantPlatformStore.class);
+	}
+
+	public TenantPlatformStore retrieveTenantPlatformStoreByTenantId(String tenantId) {
+		return client.getSingle(ENDPOINT_TENANTS + "/platform/tenant/" + tenantId, TenantPlatformStore.class);
+	}
+
+	public Tenant retrieveTenantByStoreId(String storeId) {
+		return client.getSingle(ENDPOINT_TENANTS + "/tenant/store/" + storeId, Tenant.class);
 	}
 
 	public Tenant getTenantInfo() {
