@@ -521,6 +521,10 @@ public class CatalogAPI {
 		return client.post(ENDPOINT_MODELING + "/single", modeling);
 	}
 
+	public long insertModelingAndCategories(Modeling modeling) {
+		return client.post(ENDPOINT_MODELING + "/single/categories", modeling);
+	}
+
 	public void updateModeling(long id, Modeling modeling) {
 		client.put(ENDPOINT_MODELING + "/single/" + id, modeling);
 	}
