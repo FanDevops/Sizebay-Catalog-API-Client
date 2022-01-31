@@ -334,7 +334,7 @@ public class CatalogAPI {
 	}
 
 	public long insertProduct(Product product) {
-		return client.post(ENDPOINT_PRODUCT + "/single", product);
+		return client.post(ENDPOINT_PRODUCT + "/single", product );
 	}
 
 	public void insertProductIntegration(ProductIntegration product) {
@@ -346,7 +346,11 @@ public class CatalogAPI {
 	}
 
 	public void updateProduct(long id, Product product) {
-		client.put(ENDPOINT_PRODUCT + "/single/" + id, product);
+		client.put(ENDPOINT_PRODUCT + "/single/" + id + "?isManualUpdate=" + false, product);
+	}
+
+	public void updateProduct(long id, Product product, Boolean isManualUpdate) {
+		client.put(ENDPOINT_PRODUCT + "/single/" + id + "?isManualUpdate=" + isManualUpdate, product);
 	}
 
 	public void bulkUpdateProducts(BulkUpdateProducts products) {
