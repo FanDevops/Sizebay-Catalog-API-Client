@@ -778,6 +778,10 @@ public class CatalogAPI {
 		return client.getSingle(ENDPOINT_TENANTS + "/platform/tenant/" + tenantId, TenantPlatformStore.class);
 	}
 
+	public void deleteTenantPlatformStoreByTenantId(long tenantId) {
+		client.delete(ENDPOINT_TENANTS + "/platform/tenant/" + tenantId);
+	}
+
 	public Tenant retrieveTenantByStoreId(String storeId) {
 		return client.getSingle(ENDPOINT_TENANTS + "/tenant/store/" + storeId, Tenant.class);
 	}
