@@ -794,6 +794,10 @@ public class CatalogAPI {
 		return client.getList( ENDPOINT_TENANTS, Tenant.class );
 	}
 
+	public List<Tenant> retrieveAllTenants(final String domain){
+		return client.getList( ENDPOINT_TENANTS + "?domain=" + domain, Tenant.class );
+	}
+
 	public List<Tenant> searchTenants(TenantFilter filter) {
 		return client.getList( ENDPOINT_TENANTS + "/search?monitored=" + filter.getMonitored(), Tenant.class);
 	}
