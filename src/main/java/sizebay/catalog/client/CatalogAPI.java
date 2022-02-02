@@ -529,6 +529,11 @@ public class CatalogAPI {
 		client.put(ENDPOINT_MODELING + "/single/" + id, modeling);
 	}
 
+	public void updateModelingWithPopulationOfDomainsAutomatically(long id, Modeling modeling) {
+		client.put(ENDPOINT_MODELING + "/single/" + id +  "/automatically", modeling);
+	}
+
+
 	public void deleteModelings() {
 		client.delete(ENDPOINT_MODELING);
 	}
