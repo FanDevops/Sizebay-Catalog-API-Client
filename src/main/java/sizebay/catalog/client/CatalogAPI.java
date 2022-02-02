@@ -521,13 +521,18 @@ public class CatalogAPI {
 		return client.post(ENDPOINT_MODELING + "/single", modeling);
 	}
 
-	public long insertModelingAndCategories(Modeling modeling) {
-		return client.post(ENDPOINT_MODELING + "/single/categories", modeling);
+	public long insertModelingWithPopulationOfDomainsAutomatically(Modeling modeling) {
+		return client.post(ENDPOINT_MODELING + "/single/automatically", modeling);
 	}
 
 	public void updateModeling(long id, Modeling modeling) {
 		client.put(ENDPOINT_MODELING + "/single/" + id, modeling);
 	}
+
+	public void updateModelingWithPopulationOfDomainsAutomatically(long id, Modeling modeling) {
+		client.put(ENDPOINT_MODELING + "/single/" + id +  "/automatically", modeling);
+	}
+
 
 	public void deleteModelings() {
 		client.delete(ENDPOINT_MODELING);
@@ -796,6 +801,10 @@ public class CatalogAPI {
 
 	public List<Tenant> retrieveAllTenants(){
 		return client.getList( ENDPOINT_TENANTS, Tenant.class );
+	}
+
+	public List<Tenant> retrieveAllTenants(final String domain){
+		return client.getList( ENDPOINT_TENANTS + "?domain=" + domain, Tenant.class );
 	}
 
 	public List<Tenant> searchTenants(TenantFilter filter) {
