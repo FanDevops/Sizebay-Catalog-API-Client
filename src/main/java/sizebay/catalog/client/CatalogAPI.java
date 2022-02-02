@@ -521,8 +521,8 @@ public class CatalogAPI {
 		return client.post(ENDPOINT_MODELING + "/single", modeling);
 	}
 
-	public long insertModelingAndCategories(Modeling modeling) {
-		return client.post(ENDPOINT_MODELING + "/single/categories", modeling);
+	public long insertModelingWithPopulationOfDomainsAutomatically(Modeling modeling) {
+		return client.post(ENDPOINT_MODELING + "/single/automatically", modeling);
 	}
 
 	public void updateModeling(long id, Modeling modeling) {
