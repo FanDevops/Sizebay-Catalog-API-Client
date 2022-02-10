@@ -361,6 +361,10 @@ public class CatalogAPI {
 		client.delete(ENDPOINT_PRODUCT + "/single/" + id);
 	}
 
+	public void deleteProductByFeedProductId(long feedProductId) {
+		client.delete(ENDPOINT_PRODUCT + "/single/feedProduct/" + feedProductId);
+	}
+
 	public void deleteProducts(List<Integer> ids) {
 		client.delete(ENDPOINT_PRODUCT + "/bulk/some", ids);
 	}
