@@ -15,7 +15,7 @@ public class TenantPlatformStore implements Serializable {
 
     Long id;
     Long tenantId;
-    Long storeId;
+    String storeId;
     String accessToken;
     String passToken;
     EcommercePlatform platform;
