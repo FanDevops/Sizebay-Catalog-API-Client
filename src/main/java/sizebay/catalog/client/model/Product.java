@@ -63,6 +63,8 @@ public class Product   {
 
   private List<String> skus;
 
+  private List<String> groupImages;
+
   @RequiredArgsConstructor
   public enum AgeGroupEnum {
     ADULT("adult"),
