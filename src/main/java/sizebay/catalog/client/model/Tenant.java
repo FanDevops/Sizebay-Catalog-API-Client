@@ -55,6 +55,8 @@ public class Tenant implements Serializable {
 
 	int active;
 
+	TenantProductIntegration productIntegration;
+
 	private List<TenantFeature> features;
 
 }
