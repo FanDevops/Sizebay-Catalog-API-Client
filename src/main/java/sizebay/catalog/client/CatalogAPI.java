@@ -250,8 +250,8 @@ public class CatalogAPI {
 		return client.post(ENDPOINT_TENANTS + "/platform/tenant", tenantPlatformStore);
 	}
 
-	public void updateTenantPlatformStore(String id, TenantPlatformStore tenantPlatformStore) {
-		client.put(ENDPOINT_TENANTS + "/platform/tenant/" + id, tenantPlatformStore);
+	public void updateTenantPlatformStore(Long tenantId, TenantPlatformStore tenantPlatformStore) {
+		client.put(ENDPOINT_TENANTS + "/platform/tenant/" + tenantId, tenantPlatformStore);
 	}
 
 	public UserTenants authenticateAndRetrieveUser(String username, String password ) {
@@ -783,7 +783,7 @@ public class CatalogAPI {
 		return client.getSingle(ENDPOINT_TENANTS + "/platform/store/" + storeId, TenantPlatformStore.class);
 	}
 
-	public TenantPlatformStore retrieveTenantPlatformStoreByTenantId(String tenantId) {
+	public TenantPlatformStore retrieveTenantPlatformStoreByTenantId(Long tenantId) {
 		return client.getSingle(ENDPOINT_TENANTS + "/platform/tenant/" + tenantId, TenantPlatformStore.class);
 	}
 
