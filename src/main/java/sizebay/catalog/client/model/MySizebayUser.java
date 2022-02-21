@@ -16,6 +16,10 @@ public class MySizebayUser {
 	private String nickname;
 	private String username;
 	private String password;
+	private String language;
+	private String userRole;
+	private Long phone;
+	private Long whatsapp;
 	private Boolean isToSendNews;
 	private UserPrivilege privilege;
 	private List<Tenant> tenants = new ArrayList<>();
