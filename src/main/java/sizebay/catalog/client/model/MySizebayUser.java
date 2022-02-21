@@ -12,6 +12,7 @@ import sizebay.catalog.client.UserPrivilege;
 @NoArgsConstructor
 public class MySizebayUser {
 
+	private Long id;
 	private String nickname;
 	private String username;
 	private String password;
