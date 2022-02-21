@@ -59,4 +59,6 @@ public class Tenant implements Serializable {
 
 	private List<TenantFeature> features;
 
+	private String language;
+
 }
