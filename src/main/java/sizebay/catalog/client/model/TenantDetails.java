@@ -15,6 +15,7 @@ public class TenantDetails {
 	private List<String> subdomains;
 	private String productIntegrationXmlLink;
 	private TenantPlan plan;
+	private TenantCountry country;
 	private String gtmCode;
 	private TenantProfile tenantProfile;
 	private SizeSystem sizeSystem;
