@@ -341,6 +341,10 @@ public class CatalogAPI {
 		client.post(ENDPOINT_PRODUCT + "/single/integration", product);
 	}
 
+	public void insertProductIntegrationPlatform(ProductIntegration product) {
+		client.post(ENDPOINT_PRODUCT + "/single/integration/platform", product);
+	}
+
 	public long insertMockedProduct(String permalink) {
 		return client.post(ENDPOINT_PRODUCT + "/mock?permalink=" + permalink, String.class);
 	}
