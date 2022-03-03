@@ -51,6 +51,8 @@ public class Tenant implements Serializable {
 
 	TenantPlan plan;
 
+	TenantCountry country;
+
 	TenantStatus status;
 
 	int active;
