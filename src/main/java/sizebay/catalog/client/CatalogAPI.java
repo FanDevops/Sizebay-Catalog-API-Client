@@ -783,8 +783,8 @@ public class CatalogAPI {
 		return client.getSingle( ENDPOINT_TENANTS+ "/single/" + appToken, Tenant.class );
 	}
 
-	public TenantPlatformStore retrieveTenantPlatformStoreByStoreId(String storeId) {
-		return client.getSingle(ENDPOINT_TENANTS + "/platform/store/" + storeId, TenantPlatformStore.class);
+	public TenantPlatformStore retrieveTenantPlatformStoreByStoreId(String storeId, String platform) {
+		return client.getSingle(ENDPOINT_TENANTS + "/platform/store/" + platform + "/" + storeId, TenantPlatformStore.class);
 	}
 
 	public TenantPlatformStore retrieveTenantPlatformStoreByTenantId(Long tenantId) {
@@ -795,8 +795,8 @@ public class CatalogAPI {
 		client.delete(ENDPOINT_TENANTS + "/platform/tenant/" + tenantId);
 	}
 
-	public Tenant retrieveTenantByStoreId(String storeId) {
-		return client.getSingle(ENDPOINT_TENANTS + "/tenant/store/" + storeId, Tenant.class);
+	public Tenant retrieveTenantByStoreId(String storeId, String platform) {
+		return client.getSingle(ENDPOINT_TENANTS + "/tenant/store/" + platform + "/" + storeId, Tenant.class);
 	}
 
 	public Tenant getTenantInfo() {
