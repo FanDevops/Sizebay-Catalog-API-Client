@@ -2,6 +2,9 @@ package sizebay.catalog.client.model;
 
 import lombok.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -49,6 +52,8 @@ public class ModelingSizeMeasures   {
   ModelingMeasureRange bar = null;
 
   ModelingMeasureRange fullBodyLength = null;
+
+	Map<SizeSystem, String> sizeSystemsGrid = new HashMap<>();
 
 }
 
